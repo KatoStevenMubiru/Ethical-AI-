@@ -1,0 +1,53 @@
+
+<html>
+  <head>
+  </head>
+  <body>
+  <center><h1>Model Card - IDOOU AI Budget Predictor</h1></center>
+  <h2>Model Details</h2>
+  <br>-- Budget Predictor AI is a model designed to predict the budget range for users of the IDOOU app based on their personal attributes such as age, gender, and education level.<br>
+  <br>-- The model aims to enhance the personalization of activity recommendations by estimating an appropriate budget, thereby streamlining the user experience.<br>
+  <br>-- Developed using Logistic Regression, the model has demonstrated high accuracy and has been evaluated for fairness to ensure equitable treatment across different user groups.<br>
+  <h2>Intended Use</h2>
+  <br>-- The Budget Predictor AI is intended for use within the IDOOU app to provide personalized activity recommendations that align with users' budget constraints.<br>
+  <br>-- By integrating interpretability features, the app can offer explanations for the budget predictions, fostering user trust and understanding.<br>
+  <br>-- The model includes privacy-preserving measures to protect user data and prompts users to verify the correctness of the predicted budget, enhancing user control and engagement.<br>
+  <h2>Factors</h2>
+  <br>-- The model considers demographic factors such as age, gender, and education level, which have been identified as relevant predictors for budget preferences.<br>
+  <br>-- Care has been taken to ensure that these factors do not lead to discriminatory outcomes, with continuous monitoring and adjustments made as necessary.<br>
+  <br>-- The model is designed to adapt to a diverse user base, with ongoing evaluations to identify and mitigate any emergent biases.<br>
+  <h2>Metrics</h2>
+  <br>-- Model performance is primarily measured by accuracy, ensuring that the majority of budget predictions align with users' actual spending habits.<br>
+  <br>-- Fairness metrics such as statistical parity difference and disparate impact have been employed to assess and promote equity across different demographic groups.<br>
+  <br>-- Additional metrics including the confusion matrix and Theil index provide a comprehensive understanding of model performance and fairness.<br>
+  <h2> Training Data </h2>
+  <br>-- The training data consists of a synthetic dataset generated from a user experience study involving approximately 300,000 participants, reflecting a diverse range of user profiles.<br>
+  <h2> Evaluation Data </h2>
+  <br>-- Evaluation data is derived from a separate split of the synthetic dataset, ensuring that the model is tested on unbiased and representative samples not seen during training.<br>
+  <h2>Quantitative Analysis</h2>
+  <br>-- The Logistic Regression model's accuracy after bias mitigation remains high at 0.9534.<br>
+  <br>-- Before applying the bias mitigation strategy, the fairness metrics showed minimal bias.<br>
+  <br>-- After bias mitigation, the fairness metrics improved slightly, indicating a more equitable model.<br>
+  
+  <br/><br/><b>Results of the AI model after applying the bias mitigation strategy</b><br/>
+  
+  <center>
+  <img src="LR_conf_matrix_transf.png"><br/>
+  <img src="perm_importance_transf.png"><br/>
+  <img src="cohort_analysis_education.png"><br/>
+  </center>
+
+  <h2>Ethical Considerations</h2>
+  <br>-- The IDOOU Budget Predictor AI is designed to enhance user experience by personalizing activity recommendations based on demographic data. While the model aims to streamline decision-making, it raises ethical considerations regarding data privacy, potential biases, and transparency.<br>
+  <br>-- The dataset's limitations, such as the representation of certain demographic groups, could introduce biases, affecting the model's fairness. The model's reliance on attributes like gender and education may perpetuate existing societal biases. Despite efforts to mitigate bias, residual disparities may still exist.<br>
+  <br>-- Users have the ability to inspect and potentially correct the model's budget predictions, providing a level of human-in-the-loop control. Risk mitigation strategies, including reweighing techniques, have been applied to address fairness concerns. However, the model may still fail in cases where the data does not accurately represent individual circumstances.<br>
+  <br>-- Potential harms include reinforcing stereotypes or systematically disadvantaging certain groups. The interpretability study highlighted key factors influencing predictions, which were addressed to some extent by the bias mitigation strategy.<br>
+  <h2>Caveats and Recommendations</h2>
+  <br>-- The dataset may lack inclusiveness, failing to capture the full spectrum of user diversity. This could lead to a model predisposed to false positives or negatives, affecting certain groups disproportionately.<br>
+  <br>-- Recommendations include continuous monitoring of the model's performance and fairness, further diversification of the dataset, and implementing additional bias mitigation techniques as needed.<br>
+  <br>-- Further ethical AI analyses I would apply beyond this project: A thorough examination of intersectional biases, user feedback integration to refine the model iteratively, and an external audit to ensure compliance with ethical AI standards.<br>
+  <h2>Business Consequences</h2>
+  <br>-- Positive Impact: The IDOOU Budget Predictor AI can significantly enhance user satisfaction by providing tailored recommendations, potentially increasing user engagement and retention.<br>
+  <br>-- Negative Impact: If users perceive the recommendations as biased or irrelevant, trust in the application could erode, leading to a decline in user base, revenue, and damage to the organization's reputation.<br>
+  </body>
+</html>
